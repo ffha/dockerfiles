@@ -11,6 +11,7 @@ RUN make install
 RUN apk del openssl-dev musl-dev gcc make curl zlib-dev
 RUN apk add --no-cache zlib libssl3 libcrypto3 pcre2
 ENTRYPOINT ["/sbin/tini", "--"]
+EXPOSE 80
 CMD nginx -g "daemon off;"
 
  
