@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:edge
 RUN apk add --no-cache tini musl-dev gcc make curl openssl-dev pcre-dev zlib-dev
 WORKDIR /usr/src
 RUN curl -O "https://tengine.taobao.org/download/tengine-2.3.3.tar.gz"
